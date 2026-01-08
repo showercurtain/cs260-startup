@@ -1,62 +1,95 @@
-# Your startup name here
+# Cooked Book
 
 [My Notes](notes.md)
 
 A brief description of the application here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-
-> [!NOTE]
->  This is a template for your startup application. You must modify this `README.md` file for each phase of your development. You only need to fill in the section for each deliverable when that deliverable is submitted in Canvas. Without completing the section for a deliverable, the TA will not know what to look for when grading your submission. Feel free to add additional information to each deliverable description, but make sure you at least have the list of rubric items and a description of what you did for each item.
-
-> [!NOTE]
->  If you are not familiar with Markdown then you should review the [documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) before continuing.
+Cooked Book will be an application where you can safely store and rank your favorite recipes for quick access and searching.
 
 ## 🚀 Specification Deliverable
 
-> [!NOTE]
->  Fill in this sections as the submission artifact for this deliverable. You can refer to this [example](https://github.com/webprogramming260/startup-example/blob/main/README.md) for inspiration.
-
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] Proper use of Markdown
-- [ ] A concise and compelling elevator pitch
-- [ ] Description of key features
-- [ ] Description of how you will use each technology
-- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] Proper use of Markdown
+- [x] A concise and compelling elevator pitch
+- [x] Description of key features
+- [x] Description of how you will use each technology
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+With this app, you can easily create new recipes and save them online, view your recipes in a clear and concise interface, and track which ingredients you've already found or used to avoid forgetting the salt or putting in too much flour! Share recipes with your family, and search through them quickly for easy meal planning! Record family recipes for your posterity!
 
 ### Design
 
-![Design image](placeholder.png)
+![Front page mockup](home-screen.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The front page for a signed-in user, giving quick access to their saved recipes with the option to filter and search.
+
+![Edit menu mockup](edit-menu.png)
+
+The edit menu, where a user can create and edit their recipes. It will be more guided than shown here
 
 ```mermaid
 sequenceDiagram
-    actor You
-    actor Website
-    You->>Website: Replace this with your design
+    box darkblue User
+    participant M as Mobile App
+    actor Y as You
+    end
+    box Gray Backend
+    participant S as Server
+    participant Database@{"type":"database"}
+    end
+    Y ->> S: Home Page?
+    S -->> Y: Home page! (Want to sign up?)
+    Y ->> S: Sign up
+    S ->> Database: Insert new user
+    Database -->> S: 👍
+    S -->> Y: Authenticated
+    Y ->> S: Home Page? (am user)
+    S ->> Database: Recipes?
+    Database -->> S: Recipes! 🤩
+    S -->> Y: Home page! (With recipes!)
+    M ->> S: Login as "You"
+    S ->> Database: This guy legit?
+    Database -->> S: Ya bro 🙄
+    S -->> M: Hello yes welcom!
+    M ->> S: Can i has lobster bisque recipe?
+    S ->> Database: What is he talking about??
+    Database -->> S: It looks kinda like this 🍲
+    S -->> M: I think this is what you're looking for
+    Y ->> S: Edit the Lobster Bisque recipe
+    S -->> M: Hey the recipe changed btw
+    Note over M: hwat
+    S ->> Database: It's different now
+    Database -->>S: 🤷
+    S -->> Y: All settled
 ```
+
+I honestly didn't know exactly what I was supposed to do with this. It isn't some social application like the example we were given. But this is how I imagine interactions (kinda) will look like between a user and the server
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Login, logout, sign up
+- Create, read, update, and delete recipes
+  - title
+  - (optional) picture
+  - ingredients
+  - instructions
+  - categories
+- View all recipes and filter based on information like prep time, number of ingredients, categories, etc.
+- Conveniently view recipes with (optional) helpers for cooking, like an ingredient tracker and built-in cook timer
 
 ### Technologies
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Correct html for page structure, 4 pages minimum (login / signup, home, about, view-recipe)
+- **CSS** - Proper styling to aid navigation and use, with soft colors, defined sections, and intuitive page layout
+- **React** - Responsive recipe edit menu with draft saving, routing, and components
+- **Service** - Backend service with endpoints for managing recipes, filtered search, and login
+- **DB/Login** - Register and log in users, store their recipes
+- **WebSocket** - Synchronize changes between a user's instances
 
 ## 🚀 AWS deliverable
 
