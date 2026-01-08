@@ -86,6 +86,7 @@ I am going to use the required technologies in the following ways.
 - **CSS** - Proper styling to aid navigation and use, with soft colors, defined sections, and intuitive page layout
 - **React** - Responsive recipe edit menu with draft saving, routing, and components
 - **Service** - Backend service with endpoints for managing recipes, filtered search, and login
+- **External Service** - Use random pictures of meat as placeholder images using https://baconmockup.com/
 - **DB/Login** - Register and log in users, store their recipes
 - **WebSocket** - Synchronize changes between a user's instances
 
