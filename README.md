@@ -40,8 +40,8 @@ sequenceDiagram
     end
     Y ->> S: Home Page?
     S -->> Y: Home page! (Want to sign up?)
-    Y ->> S: Sign up
-    S ->> Database: Insert new user
+    Y ->> S: Log in
+    S ->> Database: This guy logged in
     Database -->> S: 👍
     S -->> Y: Authenticated
     Y ->> S: Home Page? (am user)
@@ -64,7 +64,7 @@ sequenceDiagram
     S -->> Y: All settled
 ```
 
-I honestly didn't know exactly what I was supposed to do with this. It isn't some social application like the example we were given. But this is how I imagine interactions (kinda) will look like between a user and the server
+I honestly didn't know exactly what I was supposed to do with this. It isn't some social application like the example we were given. But this is how I imagine interactions (kinda) will look like between a user's browser and the server
 
 ### Key features
 
@@ -85,82 +85,7 @@ I am going to use the required technologies in the following ways.
 - **HTML** - Correct html for page structure, 4 pages minimum (login / signup, home, about, view-recipe)
 - **CSS** - Proper styling to aid navigation and use, with soft colors, defined sections, and intuitive page layout
 - **React** - Responsive recipe edit menu with draft saving, routing, and components
-- **Service** - Backend service with endpoints for managing recipes, filtered search, and login
+- **Service** - Backend service with endpoints for managing recipes, filtered searches, and authentication
 - **External Service** - Use random pictures of meat as placeholder images using https://baconmockup.com/
 - **DB/Login** - Register and log in users, store their recipes
 - **WebSocket** - Synchronize changes between a user's instances
-
-## 🚀 AWS deliverable
-
-For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
-
-- [ ] **Server deployed and accessible with custom domain name** - [My server link](https://yourdomainnamehere.click).
-
-## 🚀 HTML deliverable
-
-For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
-
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
-
-## 🚀 CSS deliverable
-
-For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
-
-- [ ] **Header, footer, and main content body** - I did not complete this part of the deliverable.
-- [ ] **Navigation elements** - I did not complete this part of the deliverable.
-- [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
-- [ ] **Application elements** - I did not complete this part of the deliverable.
-- [ ] **Application text content** - I did not complete this part of the deliverable.
-- [ ] **Application images** - I did not complete this part of the deliverable.
-
-## 🚀 React part 1: Routing deliverable
-
-For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
-
-- [ ] **Bundled using Vite** - I did not complete this part of the deliverable.
-- [ ] **Components** - I did not complete this part of the deliverable.
-- [ ] **Router** - I did not complete this part of the deliverable.
-
-## 🚀 React part 2: Reactivity deliverable
-
-For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
-
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
-
-## 🚀 Service deliverable
-
-For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
-
-- [ ] **Node.js/Express HTTP service** - I did not complete this part of the deliverable.
-- [ ] **Static middleware for frontend** - I did not complete this part of the deliverable.
-- [ ] **Calls to third party endpoints** - I did not complete this part of the deliverable.
-- [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Supports registration, login, logout, and restricted endpoint** - I did not complete this part of the deliverable.
-
-
-## 🚀 DB deliverable
-
-For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
-
-- [ ] **Stores data in MongoDB** - I did not complete this part of the deliverable.
-- [ ] **Stores credentials in MongoDB** - I did not complete this part of the deliverable.
-
-## 🚀 WebSocket deliverable
-
-For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
-
-- [ ] **Backend listens for WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Frontend makes WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
-- [ ] **Application is fully functional** - I did not complete this part of the deliverable.
